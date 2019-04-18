@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.DialogFragment
 import kotlinx.android.synthetic.main.main_act.*
@@ -25,11 +26,20 @@ internal class SampleDialogFragment1 : DialogFragment() {
     container: ViewGroup?,
     savedInstanceState: Bundle?
   ): View? {
-    val view = inflater.inflate(
+//    dialog!!.window!!.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+    return inflater.inflate(
       R.layout.sample_dialog1,
       container,
       false
     )
-    return view
+  }
+
+  override fun onStart() {
+    super.onStart()
+//    dialog!!.window!!.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+  }
+
+  override fun getTheme(): Int {
+    return R.style.Widget_AppSample_Dialog_Full
   }
 }
