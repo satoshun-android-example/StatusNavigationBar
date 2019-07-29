@@ -26,17 +26,11 @@ internal class SampleDialogFragment1 : DialogFragment() {
     container: ViewGroup?,
     savedInstanceState: Bundle?
   ): View? {
-//    dialog!!.window!!.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
     return inflater.inflate(
       R.layout.sample_dialog1,
       container,
       false
     )
-  }
-
-  override fun onStart() {
-    super.onStart()
-//    dialog!!.window!!.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
   }
 
   override fun getTheme(): Int {
