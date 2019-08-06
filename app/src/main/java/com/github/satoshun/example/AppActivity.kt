@@ -17,5 +17,9 @@ class AppActivity : AppCompatActivity() {
     findViewById<View>(R.id.navigation).setOnClickListener {
       startActivity(Intent(this@AppActivity, HideNavigationActivity::class.java))
     }
+
+    findViewById<View>(R.id.navigation2).setOnClickListener {
+      startActivity(Intent(this@AppActivity, HideNavigation2Activity::class.java))
+    }
   }
 }
