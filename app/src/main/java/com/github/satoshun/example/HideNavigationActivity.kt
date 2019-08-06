@@ -3,8 +3,13 @@ package com.github.satoshun.example
 import android.app.Activity
 import android.graphics.Color
 import android.os.Bundle
+import android.os.Handler
+import android.view.View
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import androidx.core.os.postDelayed
+import androidx.core.view.ViewCompat
 
 
 class HideNavigationActivity : AppCompatActivity() {
@@ -78,13 +83,29 @@ class HideNavigationActivity : AppCompatActivity() {
 //    window.statusBarColor = Color.TRANSPARENT
 //    findViewById<View>(R.id.top).fitsSystemWindows = false
 
-    // status bar:
-    // navigation bar:
-//    window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-//    window.addFlags(
+//    window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+////    window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+//    window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+//    window.clearFlags(
 //      WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS
 //    )
+//    window.statusBarColor = Color.TRANSPARENT
 //    findViewById<View>(R.id.top).fitsSystemWindows = false
+
+    // status bar:
+    // navigation bar:
+    window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+    window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+    window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+    window.statusBarColor = Color.TRANSPARENT
+    findViewById<View>(R.id.top).fitsSystemWindows = false
+
+//    window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+
+//    Handler().postDelayed(1000) {
+//      findViewById<View>(R.id.top).fitsSystemWindows = false
+//      findViewById<View>(R.id.top).requestApplyInsets()
+//    }
 
     // status bar:
     // navigation bar:
@@ -98,12 +119,26 @@ class HideNavigationActivity : AppCompatActivity() {
 //    setWindowFlag(this, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, false)
 //    window.statusBarColor = Color.TRANSPARENT
 
-    window.setFlags(
-      WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-      WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
-    )
-    window.clearFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
-    window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+//    window.setFlags(
+//      WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+//      WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+//    )
+//    window.clearFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+//    window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+
+//    window.setFlags(
+//      WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+//      WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+//    )
+
+//    window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+//    window.statusBarColor = Color.TRANSPARENT
+//    window.navigationBarColor = Color.BLUE
+//    window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+
+//    window.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN)
+//    window.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+//    window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION)
   }
 
   private fun setWindowFlag(activity: Activity, bits: Int, on: Boolean) {
