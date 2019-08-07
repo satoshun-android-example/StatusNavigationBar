@@ -23,7 +23,7 @@
     <activity android:name=".MainActivity" />
     <activity android:name=".HideNavigationActivity" />
     <activity
-      android:name=".HideNavigation2Activity"
-      android:theme="@style/AppTheme.Hoge" />
+      android:name=".LightNavigationActivity"
+      android:theme="@style/AppTheme.LightNavigation" />
   </application>
 </manifest>
