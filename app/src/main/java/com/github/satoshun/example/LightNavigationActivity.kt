@@ -13,7 +13,11 @@ class LightNavigationActivity : AppCompatActivity() {
     setContentView(R.layout.light_navigation_act)
     setSupportActionBar(findViewById(R.id.toolbar))
 
+    println(window.decorView.systemUiVisibility)
+
     findViewById<View>(R.id.bottom_sheet).setOnClickListener {
+      //      window.decorView.systemUiVisibility = 0
+
       TestBottomSheetDialogFragment()
         .show(supportFragmentManager, "hoge")
     }
@@ -27,5 +31,9 @@ class TestBottomSheetDialogFragment : BottomSheetDialogFragment() {
     savedInstanceState: Bundle?
   ): View? {
     return inflater.inflate(R.layout.light_navigation_bottom_sheet, container, false)
+  }
+
+  override fun getTheme(): Int {
+    return R.style.AppTheme_Dialog_LightNavigation
   }
 }

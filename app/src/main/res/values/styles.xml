@@ -43,13 +43,12 @@
   </style>
 
   <style name="AppTheme.LightNavigation" parent="AppTheme.NoActionBar">
-    <!--    <item name="android:windowTranslucentNavigation">true</item>-->
-    <!--    <item name="android:windowLightNavigationBar">true</item>-->
-
     <item name="android:windowLightNavigationBar">true</item>
     <item name="android:navigationBarColor">@android:color/white</item>
+  </style>
 
-<!--    <item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
-    <!--    <item name="android:navigationBarColor">@android:color/white</item>-->
+  <style name="AppTheme.Dialog.LightNavigation" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+    <item name="android:windowIsFloating">false</item>
+    <item name="android:windowLightNavigationBar">false</item>
   </style>
 </resources>
