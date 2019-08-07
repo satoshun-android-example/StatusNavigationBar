@@ -7,5 +7,6 @@ class HideNavigation2Activity : AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.hide_navigation_act)
+    setSupportActionBar(findViewById(R.id.toolbar))
   }
 }
