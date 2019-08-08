@@ -50,5 +50,6 @@
   <style name="AppTheme.Dialog.LightNavigation" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
     <item name="android:windowIsFloating">false</item>
     <item name="android:windowLightNavigationBar">false</item>
+    <item name="android:navigationBarColor">@android:color/black</item>
   </style>
 </resources>
